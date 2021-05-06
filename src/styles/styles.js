@@ -1,7 +1,9 @@
 // CORES
-export const COR_DE_FUNDO = '#F4F0F4';
+export const COR_DE_FUNDO = '#2148C0';
 export const BLACK = '#000000';
 export const WHITE = '#fff';
+export const DARK_BLUE = '#252169';
+
 export const LIGHTGRAY = '#CACACA';
 export const GRAY = '#c6c6c6';
 export const LIGHTERGRAY = '#dcdcdc';
@@ -10,7 +12,6 @@ export const CRIMSON = '#eb503f';
 export const CRIMSON2 = '#e04f5f';
 export const GREEN = '#66c65f';
 export const GREEN2 = '#67ce83';
-export const DARK_BLUE = '#23466b';
 export const LIGHT_BLUE = '#afbce5';
 
 // TIPOGRAFIA

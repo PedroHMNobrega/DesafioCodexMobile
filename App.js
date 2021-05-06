@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import SplashScreen from 'react-native-splash-screen';
-import {Home} from './src/Views/Home';
+import {Login} from './src/Views/Login';
 import {NavigationContainer} from '@react-navigation/native';
 import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
 import Provider from './src/Providers/userInfoProvider.js';
@@ -16,13 +16,13 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <StatusBar backgroundColor={'white'} barStyle={'dark-content'} />
+      <StatusBar backgroundColor={COR_DE_FUNDO} barStyle={'light-content'} />
       <Provider>
         <SafeAreaView style={style.container}>
-          <Stack.Navigator initialRouteName={'Home'}>
+          <Stack.Navigator initialRouteName={'Login'}>
             <Stack.Screen
-              name={'Home'}
-              component={Home}
+              name={'Login'}
+              component={Login}
               options={{headerShown: false}}
             />
           </Stack.Navigator>
