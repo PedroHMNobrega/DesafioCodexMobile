@@ -34,6 +34,7 @@ const CreateAccountForm = ({error, setError}) => {
           value={password}
           setValue={setPassword}
           label={'Senha'}
+          password={true}
         />
         <MainButton title={'CADASTRAR'} callback={handleCreate} />
       </ScrollView>

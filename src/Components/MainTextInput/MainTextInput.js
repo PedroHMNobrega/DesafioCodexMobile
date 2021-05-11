@@ -2,7 +2,14 @@ import React from 'react';
 import {Text, TextInput, View} from 'react-native';
 import style from './style.js';
 
-const MainTextInput = ({label, placeholder, value, setValue, error}) => {
+const MainTextInput = ({
+  label,
+  placeholder,
+  value,
+  setValue,
+  error,
+  password = false,
+}) => {
   function getStyle() {
     if (error) {
       return [style.textInput, style.error];
@@ -18,6 +25,7 @@ const MainTextInput = ({label, placeholder, value, setValue, error}) => {
         value={value}
         onChangeText={text => setValue(text.trimStart())}
         style={getStyle()}
+        secureTextEntry={password}
       />
     </View>
   );

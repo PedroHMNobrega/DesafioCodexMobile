@@ -8,6 +8,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {COR_DE_FUNDO} from './src/styles/styles.js';
 import {CreateAccount} from './src/Views/CreateAccount';
 import {Message} from './src/Components/Message';
+import {Tasks} from './src/Views/Tasks';
 
 const Stack = createStackNavigator();
 
@@ -31,6 +32,11 @@ const App = () => {
             <Stack.Screen
               name={'CreateAccount'}
               component={CreateAccount}
+              options={{headerShown: false}}
+            />
+            <Stack.Screen
+              name={'Tasks'}
+              component={Tasks}
               options={{headerShown: false}}
             />
           </Stack.Navigator>

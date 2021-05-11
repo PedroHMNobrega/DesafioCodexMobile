@@ -1,7 +1,9 @@
 import {request} from './request.js';
 import {apiUrl} from '../config/apiUrl.js';
+import {stringUtil} from '../util/stringUtil.js';
 
 async function login(email, password) {
+  [email, password] = stringUtil.trimString([email, password]);
   const body = {
     email: email,
     password: password,
@@ -15,6 +17,8 @@ async function logout(token) {
 }
 
 async function createUser(name, email, password) {
+  [name, email, password] = stringUtil.trimString([name, email, password]);
+
   const body = {
     name: name,
     email: email,
