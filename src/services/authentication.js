@@ -5,24 +5,24 @@ const tokenKey = 'taskomp-tokenKey';
 
 export const login = async (email, password) => {
   const token = await userApi.login(email, password);
-  AsyncStorage.setItem(tokenKey, token);
+  await AsyncStorage.setItem(tokenKey, token);
 };
 
 export const logout = async () => {
-  const token = getToken();
+  const token = await getToken();
   try {
     await userApi.logout(token);
-    AsyncStorage.removeItem(tokenKey);
+    await AsyncStorage.removeItem(tokenKey);
   } catch (e) {
-    AsyncStorage.removeItem(tokenKey);
+    await AsyncStorage.removeItem(tokenKey);
   }
 };
 
-export const getToken = () => {
-  return AsyncStorage.getItem(tokenKey);
+export const getToken = async () => {
+  return await AsyncStorage.getItem(tokenKey);
 };
 
-export const verifyLogin = () => {
-  const token = getToken();
+export const verifyLogin = async () => {
+  const token = await getToken();
   return token != null;
 };

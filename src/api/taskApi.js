@@ -14,11 +14,11 @@ async function addTask(name, priority) {
     name: name,
     priority: priority,
   };
-  await request.postRequest(body, apiUrl + 'tasks', getToken());
+  await request.postRequest(body, apiUrl + 'tasks', await getToken());
 }
 
 async function deleteTask(id) {
-  await request.deleteRequest(apiUrl + 'task/' + id, getToken());
+  await request.deleteRequest(apiUrl + 'task/' + id, await getToken());
 }
 
 async function updateTask(id, name, priority) {
@@ -28,7 +28,7 @@ async function updateTask(id, name, priority) {
     name: name,
     priority: priority,
   };
-  await request.putRequest(apiUrl + 'task/' + id, body, getToken());
+  await request.putRequest(apiUrl + 'task/' + id, body, await getToken());
 }
 
 export const taskApi = {

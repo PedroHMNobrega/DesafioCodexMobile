@@ -1,10 +1,10 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {ScrollView, Text, TouchableOpacity, View} from 'react-native';
 import style from './style.js';
 import {MainTextInput} from '../../../../Components/MainTextInput';
 import {useNavigation} from '@react-navigation/native';
 import {MainButton} from '../../../../Components/MainButton';
-import {login} from '../../../../services/authentication.js';
+import {login, verifyLogin} from '../../../../services/authentication.js';
 import {DataContext} from '../../../../Providers/messageProvider.js';
 
 const LoginForm = () => {
@@ -13,10 +13,19 @@ const LoginForm = () => {
   const navigator = useNavigation();
   const {displayMessage} = useContext(DataContext);
 
+  useEffect(() => {
+    async function verifyUserLogin() {
+      if (await verifyLogin()) {
+        navigator.replace('Tasks');
+      }
+    }
+    verifyUserLogin();
+  }, [navigator]);
+
   async function handleLogin() {
     try {
       await login(email, password);
-      navigator.push('Tasks');
+      navigator.replace('Tasks');
     } catch (e) {
       displayMessage('error', e.message);
     }
