@@ -1,23 +1,26 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {ScrollView, Text, View} from 'react-native';
 import style from './style.js';
 import {MainTextInput} from '../../../../Components/MainTextInput';
 import {useNavigation} from '@react-navigation/native';
 import {MainButton} from '../../../../Components/MainButton';
 import {userApi} from '../../../../api/userApi.js';
+import {DataContext} from '../../../../Providers/messageProvider.js';
 
 const CreateAccountForm = ({error, setError}) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigator = useNavigation();
+  const {displayMessage} = useContext(DataContext);
 
   async function handleCreate() {
     try {
       await userApi.createUser(name, email, password);
+      displayMessage('success', 'Usuário cadastrado com sucesso!');
       navigator.goBack();
     } catch (e) {
-      setError(e.message);
+      displayMessage('error', e.message);
     }
   }
 

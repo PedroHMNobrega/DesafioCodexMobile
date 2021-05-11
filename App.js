@@ -3,10 +3,11 @@ import SplashScreen from 'react-native-splash-screen';
 import {Login} from './src/Views/Login';
 import {NavigationContainer} from '@react-navigation/native';
 import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
-import Provider from './src/Providers/userInfoProvider.js';
+import Provider from './src/Providers/messageProvider.js';
 import {createStackNavigator} from '@react-navigation/stack';
 import {COR_DE_FUNDO} from './src/styles/styles.js';
 import {CreateAccount} from './src/Views/CreateAccount';
+import {Message} from './src/Components/Message';
 
 const Stack = createStackNavigator();
 
@@ -20,6 +21,7 @@ const App = () => {
       <StatusBar backgroundColor={COR_DE_FUNDO} barStyle={'light-content'} />
       <Provider>
         <SafeAreaView style={style.container}>
+          <Message />
           <Stack.Navigator initialRouteName={'Login'}>
             <Stack.Screen
               name={'Login'}

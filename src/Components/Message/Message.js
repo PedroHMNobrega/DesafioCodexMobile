@@ -1,19 +1,21 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {Text, View} from 'react-native';
 import style from './style.js';
+import {DataContext} from '../../Providers/messageProvider.js';
 
-const Message = ({message, setMessage, type}) => {
+const Message = () => {
   const [visible, setVisible] = useState(false);
+  const {type, message, resetMessage} = useContext(DataContext);
 
   useEffect(() => {
     if (message !== '') {
       setVisible(true);
       setTimeout(() => {
         setVisible(false);
-        setMessage('');
+        resetMessage();
       }, 4000);
     }
-  }, [message, setMessage]);
+  }, [message, resetMessage]);
 
   function getClass() {
     switch (type) {
