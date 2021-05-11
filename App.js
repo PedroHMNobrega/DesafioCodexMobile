@@ -6,6 +6,7 @@ import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
 import Provider from './src/Providers/userInfoProvider.js';
 import {createStackNavigator} from '@react-navigation/stack';
 import {COR_DE_FUNDO} from './src/styles/styles.js';
+import {CreateAccount} from './src/Views/CreateAccount';
 
 const Stack = createStackNavigator();
 
@@ -23,6 +24,11 @@ const App = () => {
             <Stack.Screen
               name={'Login'}
               component={Login}
+              options={{headerShown: false}}
+            />
+            <Stack.Screen
+              name={'CreateAccount'}
+              component={CreateAccount}
               options={{headerShown: false}}
             />
           </Stack.Navigator>

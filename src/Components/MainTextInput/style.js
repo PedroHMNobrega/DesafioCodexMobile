@@ -4,17 +4,19 @@ import {
   FONT_FAMILY_LIGTH,
   FONT_SIZE_MEDIUM,
   LIGHTERGRAY,
+  WHITE,
 } from '../../styles/styles.js';
 
 const style = StyleSheet.create({
   inputContainer: {
-    paddingVertical: 15,
+    paddingVertical: 10,
   },
   inputLabel: {
     fontSize: FONT_SIZE_MEDIUM,
     fontFamily: FONT_FAMILY_LIGTH,
     marginBottom: 5,
     marginLeft: 5,
+    color: WHITE,
   },
   textInput: {
     borderRadius: 20,

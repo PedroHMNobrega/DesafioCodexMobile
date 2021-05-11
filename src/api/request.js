@@ -53,6 +53,7 @@ async function putRequest(url, body, token) {
 function getHeaders(token) {
   const headers = new Headers();
   headers.append('Content-Type', 'application/json');
+  headers.append('Accept', 'application/json');
   if (token) {
     headers.append('Authorization', 'Bearer ' + token);
   }

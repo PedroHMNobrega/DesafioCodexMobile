@@ -1,19 +1,20 @@
 import {StyleSheet} from 'react-native';
-import {CRIMSON2, FONT_FAMILY_BOLD, WHITE} from '../../styles/styles.js';
+import {BLACK, FONT_FAMILY_MEDIUM, WHITE} from '../../styles/styles.js';
 
 const style = StyleSheet.create({
   saveButton: {
     alignItems: 'center',
-    backgroundColor: CRIMSON2,
-    width: 150,
+    backgroundColor: WHITE,
     paddingHorizontal: 30,
     paddingVertical: 10,
-    borderRadius: 20,
+    borderRadius: 5,
+    elevation: 5,
+    marginTop: 10,
   },
   saveText: {
-    color: WHITE,
+    color: BLACK,
     fontSize: 18,
-    fontFamily: FONT_FAMILY_BOLD,
+    fontFamily: FONT_FAMILY_MEDIUM,
   },
 });
 

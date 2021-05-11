@@ -23,20 +23,6 @@ const style = StyleSheet.create({
   },
   form: {
   },
-  createButtonContainer: {
-    marginBottom: 15,
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
-  },
-  createButton: {
-    paddingTop: 5,
-    paddingLeft: 10,
-  },
-  createText: {
-    color: WHITE,
-    fontFamily: FONT_FAMILY_MEDIUM,
-    fontSize: FONT_SIZE_MEDIUM,
-  },
 });
 
 export default style;
