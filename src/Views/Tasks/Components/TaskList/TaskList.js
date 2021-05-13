@@ -8,7 +8,7 @@ import {taskApi} from '../../../../api/taskApi.js';
 import {useFocusEffect, useNavigation} from '@react-navigation/native';
 import {logout} from '../../../../services/authentication.js';
 import {Task} from '../Task';
-import {AddTask} from '../../../AddTask';
+import {AddTask} from '../AddTask';
 
 const TaskList = () => {
   const [tasks, setTasks] = useState([]);

@@ -5,7 +5,7 @@ import {
   FONT_SIZE_X_LARGE,
   FONT_SIZE_XX_LARGE,
   WHITE,
-} from '../../styles/styles.js';
+} from '../../../../styles/styles.js';
 
 const width = Dimensions.get('screen').width;
 const height = Dimensions.get('screen').height;
@@ -25,11 +25,21 @@ const style = StyleSheet.create({
     padding: 20,
     borderRadius: 20,
   },
+  goBackButton: {
+    height: 40,
+    width: 40,
+    marginTop: -10,
+    marginLeft: -10,
+    borderRadius: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   title: {
     textAlign: 'center',
     fontFamily: FONT_FAMILY_MEDIUM,
     fontSize: FONT_SIZE_X_LARGE,
     marginBottom: 5,
+    marginTop: -10,
   },
 });
 

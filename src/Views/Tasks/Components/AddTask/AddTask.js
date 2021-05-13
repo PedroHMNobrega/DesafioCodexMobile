@@ -1,12 +1,14 @@
 import React, {useContext, useState} from 'react';
-import {StatusBar, Text, View} from 'react-native';
+import {StatusBar, Text, TouchableOpacity, View} from 'react-native';
 import style from './style.js';
-import {BLACK} from '../../styles/styles.js';
-import {MainTextInput} from '../../Components/MainTextInput';
-import {DataContext} from '../../Providers/messageProvider.js';
-import {MainPicker} from '../../Components/MainPicker';
-import {MainButton} from '../../Components/MainButton';
-import {taskApi} from '../../api/taskApi.js';
+import {BLACK} from '../../../../styles/styles.js';
+import {MainTextInput} from '../../../../Components/MainTextInput';
+import {DataContext} from '../../../../Providers/messageProvider.js';
+import {MainPicker} from '../../../../Components/MainPicker';
+import {MainButton} from '../../../../Components/MainButton';
+import {taskApi} from '../../../../api/taskApi.js';
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {faArrowLeft} from '@fortawesome/free-solid-svg-icons';
 
 const AddTask = ({setShowAddTask}) => {
   const [name, setName] = useState('');
@@ -29,11 +31,18 @@ const AddTask = ({setShowAddTask}) => {
     }
   }
 
+  function handleGoBack() {
+    setShowAddTask(false);
+  }
+
   return (
     <>
       <StatusBar backgroundColor={BLACK} barStyle={'light-content'} />
       <View style={style.container}>
         <View style={style.form}>
+          <TouchableOpacity onPress={handleGoBack} style={style.goBackButton}>
+            <FontAwesomeIcon icon={faArrowLeft} size={20} />
+          </TouchableOpacity>
           <Text style={style.title}>Adicionar Tarefa</Text>
           <MainTextInput
             label={'Nome'}
