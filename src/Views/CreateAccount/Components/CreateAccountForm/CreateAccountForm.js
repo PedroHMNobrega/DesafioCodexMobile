@@ -17,8 +17,8 @@ const CreateAccountForm = ({error, setError}) => {
   async function handleCreate() {
     try {
       await userApi.createUser(name, email, password);
-      displayMessage('success', 'Usuário cadastrado com sucesso!');
       navigator.goBack();
+      displayMessage('success', 'Usuário cadastrado com sucesso!');
     } catch (e) {
       displayMessage('error', e.message);
     }

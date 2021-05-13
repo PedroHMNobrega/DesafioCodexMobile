@@ -24,7 +24,6 @@ const style = StyleSheet.create({
   },
   scrollContainer: {
     paddingHorizontal: 20,
-    // paddingBottom: 10,
   },
   taskContainer: {
     borderRadius: 10,

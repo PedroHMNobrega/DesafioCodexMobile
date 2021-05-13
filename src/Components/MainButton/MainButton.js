@@ -3,17 +3,6 @@ import {Text, TouchableOpacity} from 'react-native';
 import style from './style.js';
 
 const MainButton = ({callback, title, type = 'primary'}) => {
-  const styles = {
-    primary: {
-      saveButton: style.saveButtonPrimary,
-      saveText: style.saveTextPrimary,
-    },
-    secondary: {
-      saveButton: style.saveButtonSecondary,
-      saveText: style.saveTextSecondary,
-    },
-  };
-
   function getType() {
     if (type === 'primary') {
       return styles.primary;
@@ -29,6 +18,17 @@ const MainButton = ({callback, title, type = 'primary'}) => {
       <Text style={[style.saveText, getType().saveText]}>{title}</Text>
     </TouchableOpacity>
   );
+};
+
+const styles = {
+  primary: {
+    saveButton: style.saveButtonPrimary,
+    saveText: style.saveTextPrimary,
+  },
+  secondary: {
+    saveButton: style.saveButtonSecondary,
+    saveText: style.saveTextSecondary,
+  },
 };
 
 export default MainButton;
