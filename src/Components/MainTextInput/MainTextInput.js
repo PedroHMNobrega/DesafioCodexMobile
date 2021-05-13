@@ -1,14 +1,16 @@
 import React from 'react';
 import {Text, TextInput, View} from 'react-native';
 import style from './style.js';
+import {WHITE} from '../../styles/styles.js';
 
 const MainTextInput = ({
   label,
   placeholder,
   value,
   setValue,
-  error,
+  error = false,
   password = false,
+  labelColor = WHITE,
 }) => {
   function getStyle() {
     if (error) {
@@ -19,7 +21,7 @@ const MainTextInput = ({
 
   return (
     <View style={style.inputContainer}>
-      <Text style={style.inputLabel}>{label}</Text>
+      <Text style={[style.inputLabel, {color: labelColor}]}>{label}</Text>
       <TextInput
         placeholder={placeholder}
         value={value}

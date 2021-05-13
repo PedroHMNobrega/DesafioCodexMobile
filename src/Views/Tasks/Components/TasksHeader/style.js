@@ -8,7 +8,8 @@ import {
 
 const style = StyleSheet.create({
   container: {
-    padding: 20,
+    height: 80,
+    paddingHorizontal: 20,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',

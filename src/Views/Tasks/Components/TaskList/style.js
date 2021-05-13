@@ -1,18 +1,14 @@
-import {StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
 import {
   BACKGROUND_COLOR,
-  BLACK,
   FONT_FAMILY_BOLD,
-  FONT_FAMILY_LIGTH,
-  FONT_SIZE_LARGE,
-  FONT_SIZE_MEDIUM,
   FONT_SIZE_X_LARGE,
   WHITE,
 } from '../../../../styles/styles.js';
 
 const style = StyleSheet.create({
   container: {
-    marginHorizontal: 20,
+    height: Dimensions.get('screen').height - 100,
   },
   title: {
     fontFamily: FONT_FAMILY_BOLD,
@@ -25,6 +21,10 @@ const style = StyleSheet.create({
   },
   addTaskIcon: {
     color: WHITE,
+  },
+  scrollContainer: {
+    paddingHorizontal: 20,
+    // paddingBottom: 10,
   },
   taskContainer: {
     borderRadius: 10,

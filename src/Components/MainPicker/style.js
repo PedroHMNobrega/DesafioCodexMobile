@@ -1,6 +1,5 @@
 import {StyleSheet} from 'react-native';
 import {
-  BLACK,
   FONT_FAMILY_LIGTH,
   FONT_SIZE_MEDIUM,
   LIGHTERGRAY,
@@ -16,16 +15,12 @@ const style = StyleSheet.create({
     marginBottom: 5,
     marginLeft: 5,
   },
-  textInput: {
+  pickerContainer: {
     borderRadius: 20,
     backgroundColor: LIGHTERGRAY,
-    padding: 15,
-    alignItems: 'center',
-    color: BLACK,
   },
-  error: {
-    borderWidth: 2,
-    borderColor: 'crimson',
+  pickerItem: {
+    color: 'black',
   },
 });
 

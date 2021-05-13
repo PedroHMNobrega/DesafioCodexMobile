@@ -1,20 +1,37 @@
 import {StyleSheet} from 'react-native';
-import {BLACK, FONT_FAMILY_MEDIUM, WHITE} from '../../styles/styles.js';
+import {
+  BACKGROUND_COLOR,
+  BLACK,
+  FONT_FAMILY_MEDIUM,
+  WHITE,
+} from '../../styles/styles.js';
 
 const style = StyleSheet.create({
   saveButton: {
     alignItems: 'center',
-    backgroundColor: WHITE,
     paddingHorizontal: 30,
     paddingVertical: 10,
-    borderRadius: 5,
     elevation: 5,
-    marginTop: 10,
   },
   saveText: {
-    color: BLACK,
     fontSize: 18,
     fontFamily: FONT_FAMILY_MEDIUM,
+  },
+  saveButtonPrimary: {
+    borderRadius: 5,
+    backgroundColor: WHITE,
+    marginTop: 10,
+  },
+  saveTextPrimary: {
+    color: BLACK,
+  },
+  saveButtonSecondary: {
+    borderRadius: 15,
+    backgroundColor: BACKGROUND_COLOR,
+    marginTop: 20,
+  },
+  saveTextSecondary: {
+    color: WHITE,
   },
 });
 
