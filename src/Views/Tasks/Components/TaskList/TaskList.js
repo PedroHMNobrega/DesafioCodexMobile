@@ -9,16 +9,18 @@ import {useFocusEffect, useNavigation} from '@react-navigation/native';
 import {logout} from '../../../../services/authentication.js';
 import {Task} from '../Task';
 import {AddTask} from '../AddTask';
+import {UpdateTask} from '../UpdateTask';
 
 const TaskList = () => {
   const [tasks, setTasks] = useState([]);
   const [showAddTask, setShowAddTask] = useState(false);
+  const [selectedTask, setSelectedTask] = useState(null);
   const navigator = useNavigation();
 
   useFocusEffect(
     React.useCallback(() => {
       listTasks();
-    }, [showAddTask]),
+    }, [showAddTask, selectedTask]),
   );
 
   useFocusEffect(
@@ -55,6 +57,9 @@ const TaskList = () => {
   return (
     <>
       {showAddTask && <AddTask setShowAddTask={setShowAddTask} />}
+      {selectedTask !== null && (
+        <UpdateTask setSelectedTask={setSelectedTask} task={selectedTask} />
+      )}
       <View style={style.container}>
         <FlatList
           data={tasks}
@@ -73,7 +78,13 @@ const TaskList = () => {
               </TouchableOpacity>
             </View>
           }
-          renderItem={({item}) => <Task task={item} listTasks={listTasks} />}
+          renderItem={({item}) => (
+            <Task
+              task={item}
+              listTasks={listTasks}
+              setSelectedTask={setSelectedTask}
+            />
+          )}
           style={style.scrollContainer}
         />
       </View>

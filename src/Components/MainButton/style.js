@@ -12,6 +12,7 @@ const style = StyleSheet.create({
     paddingHorizontal: 30,
     paddingVertical: 10,
     elevation: 5,
+    marginTop: 10,
   },
   saveText: {
     fontSize: 18,
@@ -20,7 +21,6 @@ const style = StyleSheet.create({
   saveButtonPrimary: {
     borderRadius: 5,
     backgroundColor: WHITE,
-    marginTop: 10,
   },
   saveTextPrimary: {
     color: BLACK,
@@ -28,7 +28,6 @@ const style = StyleSheet.create({
   saveButtonSecondary: {
     borderRadius: 15,
     backgroundColor: BACKGROUND_COLOR,
-    marginTop: 20,
   },
   saveTextSecondary: {
     color: WHITE,

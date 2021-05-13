@@ -23,6 +23,7 @@ const style = StyleSheet.create({
     color: BLACK,
     fontFamily: FONT_FAMILY_BOLD,
     fontSize: FONT_SIZE_LARGE,
+    width: '60%',
   },
   taskPriorityContainer: {
     backgroundColor: 'red',
