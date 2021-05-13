@@ -5,7 +5,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {SafeAreaView, StatusBar, StyleSheet} from 'react-native';
 import Provider from './src/Providers/messageProvider.js';
 import {createStackNavigator} from '@react-navigation/stack';
-import {COR_DE_FUNDO} from './src/styles/styles.js';
+import {BACKGROUND_COLOR} from './src/styles/styles.js';
 import {CreateAccount} from './src/Views/CreateAccount';
 import {Message} from './src/Components/Message';
 import {Tasks} from './src/Views/Tasks';
@@ -19,7 +19,10 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <StatusBar backgroundColor={COR_DE_FUNDO} barStyle={'light-content'} />
+      <StatusBar
+        backgroundColor={BACKGROUND_COLOR}
+        barStyle={'light-content'}
+      />
       <Provider>
         <SafeAreaView style={style.container}>
           <Message />
@@ -49,7 +52,7 @@ const App = () => {
 const style = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: COR_DE_FUNDO,
+    backgroundColor: BACKGROUND_COLOR,
     width: '100%',
   },
 });

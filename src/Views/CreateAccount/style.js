@@ -1,9 +1,9 @@
 import {StyleSheet} from 'react-native';
-import {COR_DE_FUNDO} from '../../styles/styles.js';
+import {BACKGROUND_COLOR} from '../../styles/styles.js';
 
 const style = StyleSheet.create({
   container: {
-    backgroundColor: COR_DE_FUNDO,
+    backgroundColor: BACKGROUND_COLOR,
     flex: 1,
   },
 });

@@ -3,8 +3,8 @@ import {apiUrl} from '../config/apiUrl.js';
 import {getToken} from '../services/authentication.js';
 import {stringUtil} from '../util/stringUtil.js';
 
-async function getTasks(token) {
-  return await request.getRequest(apiUrl + 'tasks', token);
+async function getTasks() {
+  return await request.getRequest(apiUrl + 'tasks', await getToken());
 }
 
 async function addTask(name, priority) {

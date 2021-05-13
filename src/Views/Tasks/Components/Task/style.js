@@ -1,31 +1,14 @@
 import {StyleSheet} from 'react-native';
 import {
-  BACKGROUND_COLOR,
   BLACK,
   FONT_FAMILY_BOLD,
   FONT_FAMILY_LIGTH,
   FONT_SIZE_LARGE,
   FONT_SIZE_MEDIUM,
-  FONT_SIZE_X_LARGE,
   WHITE,
 } from '../../../../styles/styles.js';
 
 const style = StyleSheet.create({
-  container: {
-    marginHorizontal: 20,
-  },
-  title: {
-    fontFamily: FONT_FAMILY_BOLD,
-    fontSize: FONT_SIZE_X_LARGE,
-  },
-  addTaskButton: {
-    backgroundColor: BACKGROUND_COLOR,
-    padding: 10,
-    borderRadius: 100,
-  },
-  addTaskIcon: {
-    color: WHITE,
-  },
   taskContainer: {
     borderRadius: 10,
     paddingHorizontal: 20,
@@ -35,6 +18,27 @@ const style = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 10,
+  },
+  taskName: {
+    color: BLACK,
+    fontFamily: FONT_FAMILY_BOLD,
+    fontSize: FONT_SIZE_LARGE,
+  },
+  taskPriorityContainer: {
+    backgroundColor: 'red',
+    padding: 10,
+    borderRadius: 10,
+  },
+  taskPriority: {
+    color: WHITE,
+    fontFamily: FONT_FAMILY_LIGTH,
+    fontSize: FONT_SIZE_MEDIUM,
+  },
+  highPriority: {
+    backgroundColor: 'crimson',
+  },
+  lowPriority: {
+    backgroundColor: '#0cc15e',
   },
 });
 

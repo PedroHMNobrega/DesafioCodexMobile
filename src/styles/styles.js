@@ -1,5 +1,5 @@
 // CORES
-export const COR_DE_FUNDO = '#2148C0';
+export const BACKGROUND_COLOR = '#2148C0';
 export const BLACK = '#000000';
 export const WHITE = '#fff';
 export const DARK_BLUE = '#252169';
