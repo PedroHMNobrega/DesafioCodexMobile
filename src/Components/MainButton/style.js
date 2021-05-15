@@ -24,7 +24,7 @@ const style = StyleSheet.create({
   saveButtonPrimary: {
     marginTop: 30,
     borderRadius: 30,
-    width: 170,
+    width: 220,
     backgroundColor: WHITE,
   },
   saveTextPrimary: {
