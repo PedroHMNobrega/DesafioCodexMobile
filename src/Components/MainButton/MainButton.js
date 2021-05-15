@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, TouchableOpacity} from 'react-native';
+import {Text, TouchableOpacity, View} from 'react-native';
 import style from './style.js';
 
 const MainButton = ({callback, title, type = 'primary'}) => {
@@ -12,11 +12,13 @@ const MainButton = ({callback, title, type = 'primary'}) => {
   }
 
   return (
-    <TouchableOpacity
-      onPress={callback}
-      style={[style.saveButton, getType().saveButton]}>
-      <Text style={[style.saveText, getType().saveText]}>{title}</Text>
-    </TouchableOpacity>
+    <View style={style.buttonContainer}>
+      <TouchableOpacity
+        onPress={callback}
+        style={[style.saveButton, getType().saveButton]}>
+        <Text style={[style.saveText, getType().saveText]}>{title}</Text>
+      </TouchableOpacity>
+    </View>
   );
 };
 

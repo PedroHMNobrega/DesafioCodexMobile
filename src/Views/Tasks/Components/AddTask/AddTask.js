@@ -14,14 +14,14 @@ const AddTask = ({setShowAddTask}) => {
   const [name, setName] = useState('');
   const [nameError, setNameError] = useState(false);
   const [priority, setPriority] = useState('alta');
-  const {displayMessage} = useContext(DataContext);
+  const {displayMessage, setLoading} = useContext(DataContext);
 
   async function handleAdd() {
     if (name.length === 0) {
       setNameError(true);
       return;
     }
-
+    setLoading(true);
     try {
       await taskApi.addTask(name, priority);
       displayMessage('success', 'Tarefa adicionada com sucesso!');
@@ -29,6 +29,7 @@ const AddTask = ({setShowAddTask}) => {
     } catch (e) {
       displayMessage('error', 'Erro ao adicionar tarefa.');
     }
+    setLoading(false);
   }
 
   function handleGoBack() {

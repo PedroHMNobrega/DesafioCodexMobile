@@ -7,6 +7,9 @@ import {
 } from '../../styles/styles.js';
 
 const style = StyleSheet.create({
+  buttonContainer: {
+    alignItems: 'center',
+  },
   saveButton: {
     alignItems: 'center',
     paddingHorizontal: 30,
@@ -19,7 +22,9 @@ const style = StyleSheet.create({
     fontFamily: FONT_FAMILY_MEDIUM,
   },
   saveButtonPrimary: {
-    borderRadius: 5,
+    marginTop: 30,
+    borderRadius: 30,
+    width: 170,
     backgroundColor: WHITE,
   },
   saveTextPrimary: {

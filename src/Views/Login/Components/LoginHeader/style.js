@@ -4,10 +4,10 @@ const style = StyleSheet.create({
   container: {
     flex: 3,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   logo: {
-    width: 230,
-    height: 230,
+    width: '90%',
   },
 });
 

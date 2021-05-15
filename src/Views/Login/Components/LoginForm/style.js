@@ -21,10 +21,8 @@ const style = StyleSheet.create({
     fontSize: FONT_SIZE_XX_LARGE,
     fontFamily: FONT_FAMILY_BOLD,
   },
-  form: {
-  },
   createButtonContainer: {
-    marginBottom: 15,
+    marginBottom: -15,
     flexDirection: 'row',
     justifyContent: 'flex-end',
   },

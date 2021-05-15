@@ -9,6 +9,7 @@ import {BACKGROUND_COLOR} from './src/styles/styles.js';
 import {CreateAccount} from './src/Views/CreateAccount';
 import {Message} from './src/Components/Message';
 import {Tasks} from './src/Views/Tasks';
+import {Loading} from './src/Components/Loading';
 
 const Stack = createStackNavigator();
 
@@ -25,6 +26,7 @@ const App = () => {
       />
       <Provider>
         <SafeAreaView style={style.container}>
+          <Loading />
           <Message />
           <Stack.Navigator initialRouteName={'Login'}>
             <Stack.Screen

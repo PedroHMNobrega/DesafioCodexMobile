@@ -5,6 +5,7 @@ export const DataContext = React.createContext();
 const Provider = ({children}) => {
   const [message, setMessage] = useState('');
   const [type, setType] = useState('');
+  const [loading, setLoading] = useState(false);
 
   function displayMessage(messageType, messageToDisplay) {
     setType(messageType);
@@ -22,6 +23,8 @@ const Provider = ({children}) => {
         type,
         displayMessage,
         resetMessage,
+        loading,
+        setLoading,
       }}>
       {children}
     </DataContext.Provider>

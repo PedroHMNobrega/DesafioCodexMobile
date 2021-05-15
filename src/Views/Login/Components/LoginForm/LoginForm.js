@@ -11,7 +11,7 @@ const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigator = useNavigation();
-  const {displayMessage} = useContext(DataContext);
+  const {displayMessage, setLoading} = useContext(DataContext);
 
   useEffect(() => {
     async function verifyUserLogin() {
@@ -23,12 +23,14 @@ const LoginForm = () => {
   }, [navigator]);
 
   async function handleLogin() {
+    setLoading(true);
     try {
       await login(email, password);
       navigator.replace('Tasks');
     } catch (e) {
       displayMessage('error', e.message);
     }
+    setLoading(false);
   }
 
   function handleCriarConta() {

@@ -12,9 +12,10 @@ const CreateAccountForm = ({error, setError}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigator = useNavigation();
-  const {displayMessage} = useContext(DataContext);
+  const {displayMessage, setLoading} = useContext(DataContext);
 
   async function handleCreate() {
+    setLoading(true);
     try {
       await userApi.createUser(name, email, password);
       navigator.goBack();
@@ -22,13 +23,14 @@ const CreateAccountForm = ({error, setError}) => {
     } catch (e) {
       displayMessage('error', e.message);
     }
+    setLoading(false);
   }
 
   return (
     <View style={style.container}>
       <Text style={style.title}>Fazer Cadastro</Text>
       <ScrollView style={style.form}>
-        <MainTextInput value={name} setValue={setName} label={'Name'} />
+        <MainTextInput value={name} setValue={setName} label={'Nome'} />
         <MainTextInput value={email} setValue={setEmail} label={'Email'} />
         <MainTextInput
           value={password}

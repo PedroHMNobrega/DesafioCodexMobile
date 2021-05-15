@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {
+  BACKGROUND_COLOR,
   FONT_FAMILY_MEDIUM,
   FONT_SIZE_LARGE,
   FONT_SIZE_XX_LARGE,
@@ -8,29 +9,31 @@ import {
 
 const style = StyleSheet.create({
   container: {
-    height: 80,
+    height: 58,
     paddingHorizontal: 20,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+    backgroundColor: WHITE,
   },
   logoutButton: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'center',
   },
   logo: {
-    color: WHITE,
+    color: BACKGROUND_COLOR,
     fontSize: FONT_SIZE_XX_LARGE,
     fontFamily: FONT_FAMILY_MEDIUM,
   },
   logoutText: {
-    color: WHITE,
+    color: BACKGROUND_COLOR,
     fontSize: FONT_SIZE_LARGE,
     fontFamily: FONT_FAMILY_MEDIUM,
-    marginRight: 10,
+    marginRight: 5,
   },
   logoutIcon: {
-    color: WHITE,
+    color: BACKGROUND_COLOR,
   },
 });
 

@@ -65,7 +65,7 @@ const TaskList = () => {
           data={tasks}
           keyExtractor={task => task._id}
           ListHeaderComponent={
-            <View style={style.taskContainer}>
+            <View style={style.taskTitleContainer}>
               <Text style={style.title}>Tarefas</Text>
               <TouchableOpacity onPress={handleAddTask}>
                 <View style={style.addTaskButton}>

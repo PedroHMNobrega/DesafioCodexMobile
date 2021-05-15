@@ -15,14 +15,14 @@ const UpdateTask = ({setSelectedTask, task}) => {
   const [nameError, setNameError] = useState(false);
   const [priority, setPriority] = useState(task.priority);
   const id = task._id;
-  const {displayMessage} = useContext(DataContext);
+  const {displayMessage, setLoading} = useContext(DataContext);
 
   async function handleUpdate() {
     if (name.length === 0) {
       setNameError(true);
       return;
     }
-
+    setLoading(true);
     try {
       await taskApi.updateTask(id, name, priority);
       displayMessage('success', 'Tarefa editada com sucesso!');
@@ -30,6 +30,7 @@ const UpdateTask = ({setSelectedTask, task}) => {
     } catch (e) {
       displayMessage('error', 'Erro ao editar tarefa.');
     }
+    setLoading(false);
   }
 
   function handleGoBack() {
@@ -37,6 +38,7 @@ const UpdateTask = ({setSelectedTask, task}) => {
   }
 
   async function handleDelete() {
+    setLoading(true);
     try {
       await taskApi.deleteTask(id);
       displayMessage('success', 'Tarefa deletada com sucesso!');
@@ -44,6 +46,7 @@ const UpdateTask = ({setSelectedTask, task}) => {
     } catch (e) {
       displayMessage('error', 'Erro ao deletar tarefa.');
     }
+    setLoading(false);
   }
 
   return (
