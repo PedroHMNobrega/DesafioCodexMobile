@@ -22,6 +22,7 @@ const UpdateTask = ({setSelectedTask, task}) => {
       setNameError(true);
       return;
     }
+
     setLoading(true);
     try {
       await taskApi.updateTask(id, name, priority);

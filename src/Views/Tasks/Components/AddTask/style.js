@@ -1,9 +1,7 @@
 import {Dimensions, StyleSheet} from 'react-native';
 import {
   FONT_FAMILY_MEDIUM,
-  FONT_SIZE_MEDIUM,
   FONT_SIZE_X_LARGE,
-  FONT_SIZE_XX_LARGE,
   WHITE,
 } from '../../../../styles/styles.js';
 

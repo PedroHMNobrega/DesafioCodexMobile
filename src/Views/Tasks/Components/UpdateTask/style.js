@@ -1,5 +1,10 @@
 import {Dimensions, StyleSheet} from 'react-native';
-import {CRIMSON, FONT_FAMILY_MEDIUM, FONT_SIZE_X_LARGE, WHITE} from '../../../../styles/styles.js';
+import {
+  CRIMSON,
+  FONT_FAMILY_MEDIUM,
+  FONT_SIZE_X_LARGE,
+  WHITE,
+} from '../../../../styles/styles.js';
 
 const width = Dimensions.get('screen').width;
 const height = Dimensions.get('screen').height;
@@ -46,7 +51,7 @@ const style = StyleSheet.create({
     color: CRIMSON,
     fontFamily: FONT_FAMILY_MEDIUM,
     textDecorationLine: 'underline',
-  }
+  },
 });
 
 export default style;

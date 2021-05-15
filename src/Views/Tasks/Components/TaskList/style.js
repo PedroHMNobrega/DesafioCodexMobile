@@ -2,7 +2,7 @@ import {Dimensions, StyleSheet} from 'react-native';
 import {
   BACKGROUND_COLOR,
   FONT_FAMILY_BOLD,
-  FONT_SIZE_X_LARGE, FONT_SIZE_XX_LARGE,
+  FONT_SIZE_XX_LARGE,
   WHITE,
 } from '../../../../styles/styles.js';
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import {Text, TouchableOpacity, TouchableWithoutFeedback, View} from 'react-native';
+import {Text, TouchableWithoutFeedback, View} from 'react-native';
 import style from './style.js';
 
-const Task = ({task, listTasks, setSelectedTask}) => {
+const Task = ({task, setSelectedTask}) => {
   const name = task.name;
   const priority = task.priority;
 

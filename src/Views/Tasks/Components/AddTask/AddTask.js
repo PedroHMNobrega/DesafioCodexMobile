@@ -21,6 +21,7 @@ const AddTask = ({setShowAddTask}) => {
       setNameError(true);
       return;
     }
+
     setLoading(true);
     try {
       await taskApi.addTask(name, priority);

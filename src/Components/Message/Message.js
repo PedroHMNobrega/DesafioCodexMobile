@@ -28,7 +28,7 @@ const Message = () => {
     }
   }
 
-  function showError() {
+  function showMessage() {
     if (visible) {
       return (
         <View style={[style.container, getClass()]}>
@@ -39,7 +39,7 @@ const Message = () => {
     return null;
   }
 
-  return showError();
+  return showMessage();
 };
 
 export default Message;

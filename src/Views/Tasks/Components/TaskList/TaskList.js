@@ -79,11 +79,7 @@ const TaskList = () => {
             </View>
           }
           renderItem={({item}) => (
-            <Task
-              task={item}
-              listTasks={listTasks}
-              setSelectedTask={setSelectedTask}
-            />
+            <Task task={item} setSelectedTask={setSelectedTask} />
           )}
           style={style.scrollContainer}
         />
